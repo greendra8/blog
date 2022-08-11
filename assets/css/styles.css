@@ -16,11 +16,11 @@ nav a { color: #24292f; font-size: 18px; font-weight: 400; padding: 0 15px; text
 
 nav a:hover { text-decoration: underline; }
 
-nav .return { float: right; font-family: "Roboto" !important; font-size: 14px !important; margin-top: 3px; background-color: #ffff004f; }
+nav .return { position: absolute; right: 25px; font-family: "Roboto" !important; font-size: 14px !important; margin-top: 3px; background-color: #ffff004f; }
 
 @media only screen and (max-width: 1200px) { .sidebar { position: relative !important; width: 100% !important; } .sidebar ul ul { padding-left: 18px !important; } #toc { font-size: 18px; margin: 0px !important; padding-right: 0px; margin-right: 0; border-right: none; } }
 
-@media only screen and (max-width: 600px) { .logo { position: relative !important; padding-bottom: 7px; } .section-nav { padding-left: 20px; } .blog-item { padding: 0; } .blog-item li { list-style-type: none; } }
+@media only screen and (max-width: 680px) { .logo { position: relative !important; padding-bottom: 7px; } .return { display: none; } .section-nav { padding-left: 20px; } .blog-item { padding: 0; } .blog-item li { list-style-type: none; } }
 
 body { margin: 0; }
 
