@@ -8,7 +8,9 @@ p { font-size: 20px; line-height: 29px; }
 
 nav { background-color: #ffffff; padding: 25px; text-align: center; border-bottom: 1px solid #d0d7de; }
 
-nav .logo { position: absolute; font-family: 'Roboto'; font-size: 25px; font-weight: 600; margin-top: -3px; }
+nav .logo { position: absolute; font-family: 'Roboto'; font-size: 22px; font-weight: 600; margin-top: -1px; }
+
+nav .return { float: right; font-family: 'Roboto'; font-size: 14px; margin-top: 3px; background-color: #ffff004f; }
 
 nav li { list-style: none; display: inline-block; }
 
