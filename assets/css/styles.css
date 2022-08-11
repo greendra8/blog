@@ -1,4 +1,4 @@
-@font-face { font-family: 'proxima-nova'; src: url("/blog/assets/fonts/ProximaNova-Regular.otf"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'proxima-nova'; src: url("/assets/fonts/ProximaNova-Regular.otf"); font-weight: normal; font-style: normal; }
 
 * { font-family: 'proxima-nova'; color: #2a2e30; }
 
@@ -8,7 +8,7 @@ p { font-size: 20px; line-height: 29px; }
 
 nav { background-color: #ffffff; padding: 25px; text-align: center; border-bottom: 1px solid #d0d7de; }
 
-nav .logo { position: absolute; font-family: 'Roboto'; font-size: 25px; font-weight: 600; }
+nav .logo { position: absolute; font-family: 'Roboto'; font-size: 25px; font-weight: 600; margin-top: -3px; }
 
 nav li { list-style: none; display: inline-block; }
 
