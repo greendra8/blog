@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-08-13T13:05:34+01:00</updated><id>/feed.xml</id><title type="html">Arinteli Blog</title><entry><title type="html">A Future Battle For Compute</title><link href="/compute-is-king" rel="alternate" type="text/html" title="A Future Battle For Compute" /><published>2022-08-11T00:00:00+01:00</published><updated>2022-08-11T00:00:00+01:00</updated><id>/compute</id><content type="html" xml:base="/compute-is-king"><![CDATA[<p>Artificial superintelligence is, by definition, artificial intelligence that far exceeds human intelligence. If artificial superintelligence one day becomes a reality, we will find ourselves far too inferior to protect ourselves from it intellectually. Instead, we will have to employ the help of another artificial superintelligent <span class="jekyll-glossary">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-08-13T13:26:12+01:00</updated><id>/feed.xml</id><title type="html">Arinteli Blog</title><entry><title type="html">A Future Battle For Compute</title><link href="/compute-is-king" rel="alternate" type="text/html" title="A Future Battle For Compute" /><published>2022-08-11T00:00:00+01:00</published><updated>2022-08-11T00:00:00+01:00</updated><id>/compute</id><content type="html" xml:base="/compute-is-king"><![CDATA[<p>Artificial superintelligence is, by definition, artificial intelligence that far exceeds human intelligence. If artificial superintelligence one day becomes a reality, we will find ourselves far too inferior to protect ourselves from it intellectually. Instead, we will have to employ the help of another artificial superintelligent <span class="jekyll-glossary">
    agent.
    <span class="jekyll-glossary-tooltip">In artificial intelligence, an intelligent agent (IA) is anything which perceives its environment, takes actions autonomously in order to achieve goals, and may improve its performance with learning or may use knowledge. They may be simple or complex — a thermostat is considered an example of an intelligent agent, as is a human being</span>
 </span></p>
@@ -13,7 +13,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">Cyperpunk style futuristic city at war [StableDiffusion]</td>
+      <td style="text-align: center">Artificial Intelligence Cold War [StableDiffusion]</td>
     </tr>
   </tbody>
 </table>
@@ -42,7 +42,7 @@
 
 <p>All of this is based on the assumption that intelligence will continue to grow by increasing compute and data abundance. And will it always be true that a more intelligent AI consistently outperforms a less intelligent AI?</p>
 
-<p>Let us take, for example, a seemingly trivial task like colour recognition. An agent that can correctly identify all colours at 5,000 parameters will be no worse than one that can do it at 1M parameters. We can recognise in this case that AI agents will not be able to improve their output with further training. This is because there are set truths that the agent must learn (yellow is yellow, blue is blue, etc.) and nothing more beyond that. Therefore, if a smaller agents output is alredy true, then a larger model will not be able to improve upon it.</p>
+<p>Let us take, for example, a seemingly trivial task like colour recognition. An agent that can correctly identify all colours at 5,000 parameters will be no worse than one that can do it at 1M parameters. We can recognise in this case that AI agents will not be able to improve their output with further training. This is because there are set truths that the agent must learn (yellow is yellow, blue is blue, etc.) and nothing more beyond that. Therefore, if a smaller agents output is already true, then a larger model will not be able to improve upon it.</p>
 
 <table>
   <thead>
@@ -52,7 +52,7 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: center">Humanoid robots being built in a factory [StableDiffusion]</td>
+      <td style="text-align: center">Humanoid robot factory [StableDiffusion]</td>
     </tr>
   </tbody>
 </table>
