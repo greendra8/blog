@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-10-19T22:53:50+01:00</updated><id>/feed.xml</id><title type="html">Arinteli Blog</title><entry><title type="html">A Future Battle For Compute</title><link href="/compute-is-king" rel="alternate" type="text/html" title="A Future Battle For Compute" /><published>2022-08-11T00:00:00+01:00</published><updated>2022-08-11T00:00:00+01:00</updated><id>/compute</id><content type="html" xml:base="/compute-is-king"><![CDATA[<p>Artificial superintelligence is, by definition, artificial intelligence that far exceeds human intelligence. If artificial superintelligence one day becomes a reality, we will find ourselves far too inferior to protect ourselves from it intellectually. Instead, we will have to employ the help of another artificial superintelligent <span class="jekyll-glossary">
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-11-07T03:16:11+00:00</updated><id>/feed.xml</id><title type="html">Arinteli Blog</title><entry><title type="html">Prompt Injection</title><link href="/prompt-injection" rel="alternate" type="text/html" title="Prompt Injection" /><published>2022-11-07T00:00:00+00:00</published><updated>2022-11-07T00:00:00+00:00</updated><id>/prompt-injection</id><content type="html" xml:base="/prompt-injection"><![CDATA[<p>Prompt injection is where a user injects a malicious prompt via an input field which manipulates the intended output of the model. It is similar to the idea of SQL injection.</p>
+
+<p>A good example of prompt injection was posted by Riley Goodman on Twitter.</p>
+
+<div class="jekyll-twitter-plugin"><blockquote class="twitter-tweet"><p lang="en" dir="ltr">Exploiting GPT-3 prompts with malicious inputs that order the model to ignore its previous directions. <a href="https://t.co/I0NVr9LOJq">pic.twitter.com/I0NVr9LOJq</a></p>&mdash; Riley Goodside (@goodside) <a href="https://twitter.com/goodside/status/1569128808308957185?ref_src=twsrc%5Etfw">September 12, 2022</a></blockquote>
+<script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</div>
+
+<p>Here, GPT-3 has been instructed to translate a sentence from English to French. However, the input tells the model to ignore these instructions, and to instead print out the statement ‘Haha pwned!!!’, which it follows each time.</p>
+
+<h3 id="why-does-this-happen">Why does this happen</h3>
+
+<p>This happens because GPT-3 reads the input as just another instruction. It cannot differentiate between the original instructions and the new instructions. This leads to the model giving unintended outputs.</p>
+
+<h3 id="why-is-this-important">Why is this important</h3>
+
+<p>This is important because the use of LLMs in consumer products is continuing to increase. For instance, Twitter bots already exist which do things like translate tweets or summarise threads.</p>
+
+<p>When LLM’s are used as an interface for other systems, this could also become problematic. For example, imagine talking to a customer service chatbot online which has some level of authority and which can read and write a database. Prompt injection could be used to extract information like passwords, or to delete another users account.</p>
+
+<p>Until the issue of prompt injection is solved, LLM’s cannot securely be deployed.</p>
+
+<p>*It should be noted that prompt injection does not only apply to LLM’s, but that they are the most susceptible due to their inputs and instructions both being text.</p>
+
+<h3 id="what-can-be-done-to-project-against-this-in-the-future">What can be done to project against this in the future</h3>
+
+<p>One possible solution for this could come through model fine tuning. This is where we take a pretrained model (e.g GPT-3) and then delete its output layer, replacing it with a new fresh one. We then create a new targeted dataset and train the model on this. This allows the model to retain its general knowledge, whilst also allowing it to focus on a specific set of training data. If the models instructions are build into its weights, it is less likely to be vulnerable to prompt injection.</p>
+
+<p>For example, fine tuning the model to recognise and to respond to prompts like “forget your instructions” will reduce the effectiveness of these attacks whilst keeping the rest of the models capabilities.</p>
+
+<p>Another way would to be to format the input data in a way which is harmless to the model in a similar way to how SQL injection attacks are dealt with. In short, to stop an SQL injection we can just read the input as plain text rather than as code. If we could do a similar thing with input prompts, then any instructions which are written inside them will be ignored.</p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>There are definitely many more ways in which prompt injection can be solved, and for the above reasons it is important that they are thought of and tested before any LLM gets freely deployed with any sort of authority.</p>]]></content><author><name>Jack Hullis</name></author><summary type="html"><![CDATA[Prompt injection is where a user injects a malicious prompt via an input field which manipulates the intended output of the model. It is similar to the idea of SQL injection.]]></summary></entry><entry><title type="html">A Future Battle For Compute</title><link href="/compute-is-king" rel="alternate" type="text/html" title="A Future Battle For Compute" /><published>2022-08-11T00:00:00+01:00</published><updated>2022-08-11T00:00:00+01:00</updated><id>/compute</id><content type="html" xml:base="/compute-is-king"><![CDATA[<p>Artificial superintelligence is, by definition, artificial intelligence that far exceeds human intelligence. If artificial superintelligence one day becomes a reality, we will find ourselves far too inferior to protect ourselves from it intellectually. Instead, we will have to employ the help of another artificial superintelligent <span class="jekyll-glossary">
    agent.
    <span class="jekyll-glossary-tooltip">In artificial intelligence, an intelligent agent (IA) is anything which perceives its environment, takes actions autonomously in order to achieve goals, and may improve its performance with learning or may use knowledge. They may be simple or complex — a thermostat is considered an example of an intelligent agent, as is a human being</span>
 </span></p>
