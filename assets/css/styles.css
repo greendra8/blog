@@ -34,7 +34,7 @@ body { margin: 0; }
 
 .content table { margin: 0 auto; }
 
-.content img { width: 600px; }
+.content img { max-width: 600px; }
 
 .content li { font-size: 20px; line-height: 29px; padding-bottom: 10px; }
 
