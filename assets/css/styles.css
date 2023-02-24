@@ -48,7 +48,7 @@ body { margin: 0; }
 
 .author-badge { font-size: 10px; background: #bbf0ff; border-radius: 5px; padding: 3px; font-family: monospace; top: -2px; position: relative; }
 
-.comment-edited { font-size: 10px; color: #ff3950; border-radius: 5px; padding: 3px; font-family: monospace; top: -14px; position: relative; }
+.comment-edited { font-size: 10px; color: #ff3950; border-radius: 5px; padding: 3px; font-family: monospace; display: block; margin: -8px 0 -8px -3px; }
 
 .comments-list { list-style-type: none; padding-left: 0; }
 
