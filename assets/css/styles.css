@@ -40,15 +40,19 @@ body { margin: 0; }
 
 #comments { margin-top: 130px; }
 
-.comment-button { background: #bbf0ff; border: none; color: #000 !important; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px; float: right; }
+.username { font-family: monospace; }
 
-.date-posted { font-size: 10px; display: inline; margin: -10px 0 -20px; }
+.comment-button { background: #bbf0ff; border: none; color: #000 !important; padding: 10px 20px; text-align: center; text-decoration: none; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px; float: right; font-family: monospace; margin-top: -25px; }
+
+.date-posted { font-size: 10px; display: inline; margin: -10px 0 -20px; font-family: monospace; }
 
 .author-badge { font-size: 10px; background: #bbf0ff; border-radius: 5px; padding: 3px; font-family: monospace; top: -2px; position: relative; }
 
+.comment-edited { font-size: 10px; color: #ff3950; border-radius: 5px; padding: 3px; font-family: monospace; top: -14px; position: relative; }
+
 .comments-list { list-style-type: none; padding-left: 0; }
 
-.comment-body p { margin-top: 0px; font-size: 18px; }
+.comment-body p { margin-top: 0px; font-size: 17px; font-family: monospace; }
 
 .sidebar { position: fixed; width: 0px; display: block; }
 
@@ -90,5 +94,7 @@ li.toc-entry.toc-h1 { font-weight: bold; }
 .jekyll-glossary .jekyll-glossary-tooltip { opacity: 0; transition: opacity 0.25s; }
 
 .jekyll-glossary:hover .jekyll-glossary-tooltip { opacity: 1; }
+
+@media only screen and (max-width: 700px) { .comment-button { float: none; } }
 
 /*# sourceMappingURL=styles.css.map */

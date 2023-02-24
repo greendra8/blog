@@ -119,7 +119,7 @@
 <section id="comments">
   <div class="comment-actions">
     <h2>Comments <span id="comments-count"></span></h2>
-    <p>Comment system powered by the GitHub Issues. Post a comment there, and it'll show up here after you reload the page.</p>
+    <p>Comment system powered by the GitHub Issues. Post a comment <a href="https://github.com/greendra8/blog/issues/1" target="_blank">here</a>, and it'll show up here after you reload the page.</p>
     <a
       class="comment-button"
       href="https://github.com/greendra8/blog/issues/1"
@@ -132,6 +132,7 @@
   </div>
 </section>
 
+<!-- Script to hide sidebar when comments are visable -->
 <script>
 const sidebar = document.querySelector('.sidebar');
 const comments = document.querySelector('#comments');
@@ -156,8 +157,6 @@ window.addEventListener('scroll', () => {
     addFadeInClass();
   }
 });
-
-
 </script>
 
 <!-- Comments script -->
@@ -250,12 +249,13 @@ const renderComments = (comments) => {
                 <div class="commenter">
                     <a
                         href="https://github.com/${user.login}"
+                        target="_blank"
                         class="meta username"
                         >${user.login}</a
                     >
                     ${postedByAuthor ? '<span class="meta tag author-badge">Jack Hullis</span>' : ''}
                     <div class="meta date-posted">commented <time datetime="${comment.created_at}">${datePosted}</time></div>
-                    ${edited ? `<span class="meta comment-edited">Edited</span>` : ''}
+                    <br>${edited ? `<span class="meta comment-edited">This message has been edited</span>` : ''}
                 </div>
                 <div class="comment-body">${body}</div>
             </li>`;
