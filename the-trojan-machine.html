@@ -111,6 +111,166 @@
 
 <p>Ultimately, the challenge of aligning AI is not one that can be solved by any one company or research group alone. It will require collaboration across a wide range of stakeholders, including policymakers, researchers, and industry leaders, to ensure that we are able to develop and deploy AI in a way that is safe, beneficial, and aligned with human values. This though, is not the path we currently find ourselves on.</p>
 
+
+
+  
+
+  
+<section id="comments">
+  <div class="comment-actions">
+    <h2>Comments <span id="comments-count"></span></h2>
+    <p>Comment system powered by the GitHub Issues. Post a comment there, and it'll show up here after you reload the page.</p>
+    <a
+      class="comment-button"
+      href="https://github.com/greendra8/blog/issues/1"
+      target="_blank"
+      >Post comment</a
+    >
+  </div>
+  <div id="comments-wrapper">
+    Loading...
+  </div>
+</section>
+
+<script>
+const sidebar = document.querySelector('.sidebar');
+const comments = document.querySelector('#comments');
+
+const addFadeOutClass = () => {
+  sidebar.classList.add('fade-out');
+  sidebar.classList.remove('fade-in');
+};
+
+const addFadeInClass = () => {
+  sidebar.classList.add('fade-in');
+  sidebar.classList.remove('fade-out');
+};
+
+window.addEventListener('scroll', () => {
+  const commentsRect = comments.getBoundingClientRect();
+  const sidebarRect = sidebar.getBoundingClientRect();
+
+  if (commentsRect.top < sidebarRect.bottom && commentsRect.bottom > sidebarRect.top) {
+    addFadeOutClass();
+  } else {
+    addFadeInClass();
+  }
+});
+
+
+</script>
+
+<!-- Comments script -->
+<script>
+    const commentsSection = document.getElementById('comments');
+    const commentsWrapper = commentsSection.querySelector('#comments-wrapper');
+    const commentsCount = commentsSection.querySelector('#comments-count');
+
+    const commentsObserver = new IntersectionObserver((entries, self) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      fetchComments();
+      sidebar.classList.add('fade-out');
+      self.unobserve(entry.target);
+    } else {
+      sidebar.classList.remove('fade-out');
+    }
+  });
+}, { rootMargin: '200px 0px 0px 0px' });
+
+
+    commentsObserver.observe(commentsSection);
+
+    const fetchComments = async () => {
+    try {
+        const comments = await (await fetch(
+        'https://api.github.com/repos/greendra8/blog/issues/1/comments'
+        )).json();
+        initRenderComments(comments);
+    } catch (e) {
+        commentsWrapper.innerHTML = `<p>Unable to retrieve the comments for this post.</p>`;
+    }
+    }
+
+    const loadScript = (src) => {
+  const scriptElement = document.createElement('script');
+  document.body.appendChild(scriptElement);
+
+  return new Promise((resolve) => {
+    scriptElement.onload = resolve;
+
+    // Important to register onload before setting src
+    scriptElement.src = src;
+  });
+}
+
+const commentScripts = [
+  'https://unpkg.com/marked@0.3.6/marked.min.js',
+  'https://unpkg.com/dompurify@1.0.8/dist/purify.min.js',
+  'https://unpkg.com/dayjs@1.8.21/dayjs.min.js',
+  'https://unpkg.com/dayjs@1.7.8/plugin/relativeTime.js',
+];
+
+// Reminder: this gets called when the viewport intersects with the comments section
+const initRenderComments = async (comments) => {
+  if (!comments.length) {
+    commentsWrapper.innerHTML = `<p>No comments yet 👀 Be the first to post!</p>`;
+    return;
+  }
+
+  // Load all comment script dependencies async
+  await Promise.all(commentScripts.map((script) => loadScript(script)));
+  renderComments(comments);
+}
+
+
+
+const renderComments = (comments) => {
+  // load the relativeTime plugin for dayjs so we can express dates relative to now
+  dayjs.extend(dayjs_plugin_relativeTime);
+
+  commentsCount.innerText = `(${comments.length})`;
+
+  const commentsList = document.createElement('ul');
+  commentsList.className = 'comments-list';
+  commentsList.setAttribute('aria-label', 'Comments on this blog post');
+
+  commentsList.innerHTML = comments
+  .sort((comment1, comment2) => {
+    return comment1.created_at < comment2.created_at ? 1 : -1;
+  })
+  .map(comment => {
+    const datePosted = dayjs(comment.created_at).fromNow();
+    const user = comment.user;
+    const body = DOMPurify.sanitize(marked(comment.body));
+    const postedByAuthor = comment.author_association === 'OWNER';
+    const edited = comment.created_at !== comment.updated_at;
+
+    return `<li class="comment">
+                <div class="commenter">
+                    <a
+                        href="https://github.com/${user.login}"
+                        class="meta username"
+                        >${user.login}</a
+                    >
+                    ${postedByAuthor ? '<span class="meta tag author-badge">Jack Hullis</span>' : ''}
+                    <div class="meta date-posted">commented <time datetime="${comment.created_at}">${datePosted}</time></div>
+                    ${edited ? `<span class="meta comment-edited">Edited</span>` : ''}
+                </div>
+                <div class="comment-body">${body}</div>
+            </li>`;
+  })
+  .join('');
+
+  commentsWrapper.innerHTML = '';
+  commentsWrapper.appendChild(commentsList);
+}
+
+
+</script>
+
+
+
     </div>
     <hr>
     <footer>Powered by HTML and Jekyll</footer>

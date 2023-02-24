@@ -38,11 +38,27 @@ body { margin: 0; }
 
 .content li { font-size: 20px; line-height: 29px; padding-bottom: 10px; }
 
+#comments { margin-top: 130px; }
+
+.comment-button { background: #bbf0ff; border: none; color: #000 !important; padding: 10px 20px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 5px; float: right; }
+
+.date-posted { font-size: 10px; display: inline; margin: -10px 0 -20px; }
+
+.author-badge { font-size: 10px; background: #bbf0ff; border-radius: 5px; padding: 3px; font-family: monospace; top: -2px; position: relative; }
+
+.comments-list { list-style-type: none; padding-left: 0; }
+
+.comment-body p { margin-top: 0px; font-size: 18px; }
+
 .sidebar { position: fixed; width: 0px; display: block; }
 
 .sidebar ul ul { padding-left: 10px; }
 
 .sidebar div { padding: 8px; font-size: 24px; display: block; }
+
+.fade-in { opacity: 1; transition: opacity 0.5s ease-in-out; }
+
+.fade-out { opacity: 0; transition: opacity 0.5s ease-in-out; }
 
 #date-author { font-size: 15px; margin-top: -15px; }
 
