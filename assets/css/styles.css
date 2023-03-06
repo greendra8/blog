@@ -60,9 +60,9 @@ body { margin: 0; }
 
 .sidebar div { padding: 8px; font-size: 24px; display: block; }
 
-.fade-in { opacity: 1; transition: opacity 0.5s ease-in-out; }
+.fade-in { opacity: 1; transition: opacity 1s ease-in-out; }
 
-.fade-out { opacity: 0; transition: opacity 0.5s ease-in-out; }
+.fade-out { opacity: 0; transition: opacity 1s ease-in-out; }
 
 #date-author { font-size: 15px; margin-top: -15px; }
 

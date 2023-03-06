@@ -169,11 +169,9 @@ window.addEventListener('scroll', () => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       fetchComments();
-      sidebar.classList.add('fade-out');
       self.unobserve(entry.target);
-    } else {
-      sidebar.classList.remove('fade-out');
-    }
+    } 
+    
   });
 }, { rootMargin: '200px 0px 0px 0px' });
 
