@@ -8,7 +8,9 @@ p { font-size: 20px; line-height: 29px; }
 
 nav { background-color: #ffffff; padding: 25px; text-align: center; border-bottom: 1px solid #d0d7de; }
 
-nav .logo { position: absolute; font-family: 'Roboto'; font-size: 22px; font-weight: 600; margin-top: -1px; }
+nav .logo { position: absolute; left: 25px; padding: 0; font-family: 'Roboto'; font-size: 22px; font-weight: 600; margin-top: -1px; }
+
+nav .logo:hover { text-decoration: none; }
 
 nav li { list-style: none; display: inline-block; }
 
@@ -16,17 +18,17 @@ nav a { color: #24292f; font-size: 18px; font-weight: 400; padding: 0 15px; text
 
 nav a:hover { text-decoration: underline; }
 
-nav .twitter { position: absolute; right: 25px; font-family: "Roboto" !important; font-size: 14px !important; margin-top: -3px; display: flex; align-items: center; }
+nav .twitter { position: absolute; right: 25px; padding: 0; font-family: "Roboto" !important; font-size: 14px !important; margin-top: -25px; display: flex; align-items: center; }
 
 nav .twitter:hover { text-decoration: none; }
 
-nav i { color: #1DA1F2; font-size: 28px !important; }
+nav i { color: #1DA1F2; font-size: 28px !important; margin-right: 5px; }
 
 @media only screen and (max-width: 1200px) { .sidebar { position: relative !important; width: 100% !important; } .sidebar ul ul { padding-left: 18px !important; } #toc { font-size: 18px; margin: 0px !important; padding-right: 0px; margin-right: 0; border-right: none !important; } }
 
 .jekyll-twitter-plugin { margin: 0 auto; text-align: center; }
 
-@media only screen and (max-width: 680px) { .logo { position: relative !important; padding-bottom: 7px; } .return { display: none; } .section-nav { padding-left: 20px; } .blog-item { padding: 0; } .blog-item li { list-style-type: none; } .content img { width: 100% !important; } }
+@media only screen and (max-width: 680px) { .logo { position: relative !important; display: block; left: unset !important; padding-bottom: 7px !important; } .twitter { display: none !important; } .section-nav { padding-left: 20px; } .blog-item { padding: 0; } .blog-item li { list-style-type: none; } .content img { width: 100% !important; } }
 
 body { margin: 0; }
 
