@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Mode Expansion Through Prompting | Arintelli Blog</title>
+<meta name="generator" content="Jekyll v4.2.2" />
+<meta property="og:title" content="Mode Expansion Through Prompting" />
+<meta name="author" content="Jack Hullis" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Mode expansion occurs when a model is encouraged to generate a wider range of outputs. Instead of messing with model weights, we can do this through intelligent prompting to encourage model output diversity. For example, we can prompt a model to generate a poem that is both unique and evocative." />
+<meta property="og:description" content="Mode expansion occurs when a model is encouraged to generate a wider range of outputs. Instead of messing with model weights, we can do this through intelligent prompting to encourage model output diversity. For example, we can prompt a model to generate a poem that is both unique and evocative." />
+<meta property="og:site_name" content="Arintelli Blog" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2023-03-26T00:00:00+00:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Mode Expansion Through Prompting" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Jack Hullis"},"dateModified":"2023-03-26T00:00:00+00:00","datePublished":"2023-03-26T00:00:00+00:00","description":"Mode expansion occurs when a model is encouraged to generate a wider range of outputs. Instead of messing with model weights, we can do this through intelligent prompting to encourage model output diversity. For example, we can prompt a model to generate a poem that is both unique and evocative.","headline":"Mode Expansion Through Prompting","mainEntityOfPage":{"@type":"WebPage","@id":"/mode-expansion"},"url":"/mode-expansion"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Arintelli Blog" />
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y838MPYL1L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-Y838MPYL1L');
+    </script>
+    
+  </head>
+  <header>
+    <nav>
+  <a class="logo" href="/">Jack Hullis' Blog</a>
+      
+        <li class="menu-item"><a href="/" >Home</a></li>
+      
+        <li class="menu-item"><a href="/blog" >Blog</a></li>
+      
+        <li class="menu-item"><a href="/about" >About</a></li>
+      
+      <a class="twitter" href="https://twitter.com/jackhullis"/ target="_blank"><i class="fa fa-twitter"></i>@jackhullis</a>
+  </nav>
+  </header>
+  <body contenteditable="false">
+    <div class="content">
+      <h1>Mode Expansion Through Prompting</h1>
+<p id="date-author">26 Mar 2023 - Jack Hullis</p>
+
+<div class="sidebar">
+    <ul id="toc" class="toc__list">
+        <li class="toc-entry toc-h2"><a href="#">Mode Expansion Through Prompting</a></li>
+    </ul>
+    <ul id="toc" class="toc__list">
+<li class="toc-entry toc-h2"><a href="#mode-collapse">Mode Collapse</a></li>
+<li class="toc-entry toc-h2"><a href="#mode-expansion">Mode Expansion</a></li>
+<li class="toc-entry toc-h2"><a href="#challenges">Challenges</a></li>
+</ul>
+    </div>
+
+
+<p>Mode collapse occurs when a model learns to generate a limited set of outputs, usually as a consequence of finetuning through RLHF. This is problematic as it greatly reduces model creativity, which in some cases can lead to a decrease in overall model performance. Mode expansion is a reversal technique that involves using prompts to improve efficacy and increase output diversity. If we can figure out how to effectively prompt a model towards mode expansion, we can potentially increase model creativity and diversity, which could lead to better model performance.</p>
+
+<h2 id="mode-collapse">Mode Collapse</h2>
+<p>Mode collapse is a serious problem that occurs when finetuning LLMs. We use finetuning in order to shape our language models to generate outputs that better fit our requests. However, this comes at a trade off against model creativity. When we finetune our models, we are essentially telling them what we want them to generate. We are pointing responses in a single specified direction.</p>
+
+<p>Whilst finetuning can lead to a model that is very good at generating a limited set of outputs, as a consequence it can lead to a decrease in performance over an alternate wider range of outputs. For example, a model which has been finetuned to produce more evocative poems might, as a trade off, lose some of the creativity that it had picked up during pretraining.</p>
+
+<h2 id="mode-expansion">Mode Expansion</h2>
+<p>Mode expansion can be thought of as the opposite to mode collapse. Mode expansion occurs when a model is encouraged to generate a wider range of outputs. Instead of messing with model weights, we can do this through intelligent prompting to encourage model output diversity. For example, we can prompt a model to generate a poem that is both unique and evocative.</p>
+
+<p>However, this isn’t always reliable. A finetuned model might have learnt to pay less attention to its instructions. Luckily, we can of course combat this by finetuning our model to better follow our instructions. This will increase the impact that the prompt has on the output of the model.</p>
+
+<p>Altman has since said that this technique was used when finetuning GPT-4, and the results have been promising. GPT-4 shows a notable increase in prompt obedience. As a result, inputs can be used to greater steer the outputs of the model towards the desired output.</p>
+
+<h2 id="challenges">Challenges</h2>
+<p>Mode expansion is a promising technique that can be used to increase model creativity and diversity. However, there are some challenges and limitations that must be addressed. One of these is that mode expansion can lead to a decrease in the accuracy of the models outputs. For example if knowledge is limited, but creativity is encouraged, inaccuracies and hallucinations are more likely to be generated. This works against the goal of finetuning, which is to increase the accuracy of the models outputs. However, by encouraging prompt obedience, we can hope to reduce the impact of this.</p>
+
+
+
+
+    </div>
+    <hr>
+    <footer>Powered by HTML and Jekyll</footer>
+  </body>
+</html>
+
