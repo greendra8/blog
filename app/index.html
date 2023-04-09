@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download | Make AI Art</title>
+    <meta name="description" content="Download your image">
+
+    <style>
+        body {
+            text-align: center;
+            margin: 20px auto;
+            padding: 0 15px;
+            background: #0b0f19;
+            color: #eee;
+        }
+        img {
+            max-width: 512px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1 style="margin-bottom: 0;">Make AI Art</h1>
+        <small>For Android</small>
+        <p>This is a temporary download link. Please download your image to ensure that you do not lose your creation.</p>
+        <p>(Long press and Save Image!)</p>
+        <img id="image" src="">
+        <br>
+        <p><b>Prompt:</b><br><span id="prompt"></span></p>
+        <p><b>Seed:</b><br><span id="seed"></span></p>
+        <p><b>Steps:</b><br> 30</p>
+        <p><b>CFG:</b><br> 7</p>
+        <p><b>Sampler:</b><br> k_lms</p>
+        <p><b>Version:</b><br> 2.1</p>
+        <br>
+        
+        <p>Image made free via <a href="https://play.google.com/store/apps/details?id=com.triceratop.aiapp">Make AI Art</a> on Android, using Stable Diffusion</p>
+        <br><br>
+    </div>
+
+    <!-- Google tags -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HD82SX0YYG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-HD82SX0YYG');
+    </script>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const link = urlParams.get('link');
+        const prompt = urlParams.get('prompt');
+        const seed = urlParams.get('seed');
+
+        document.getElementById('image').src = link;
+        document.getElementById('prompt').innerText = prompt;
+        document.getElementById('seed').innerText = seed;
+    </script>
+</body>
+</html>
