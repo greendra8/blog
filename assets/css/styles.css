@@ -24,7 +24,7 @@ nav .twitter:hover { text-decoration: none; }
 
 nav i { color: #1DA1F2; font-size: 28px !important; margin-right: 5px; }
 
-@media only screen and (max-width: 1200px) { .sidebar { position: relative !important; width: 100% !important; } .sidebar ul ul { padding-left: 18px !important; } #toc { font-size: 18px; margin: 0px !important; padding-right: 0px; margin-right: 0; border-right: none !important; } }
+@media only screen and (max-width: 1200px) { .sidebar { position: relative !important; width: 100% !important; } .sidebar ul ul { padding-left: 18px !important; } #toc { font-size: 18px; margin: 0px !important; padding-right: 0px; margin-right: 0; border-right: none !important; } .toc__list { padding-left: 20px; } }
 
 .jekyll-twitter-plugin { margin: 0 auto; text-align: center; }
 
@@ -43,6 +43,8 @@ body { margin: 0; }
 .content img { max-width: 600px; }
 
 .content li { font-size: 20px; line-height: 29px; padding-bottom: 10px; }
+
+.blog-item h2 { line-height: 1.2em; }
 
 #comments { margin-top: 130px; }
 
