@@ -6,13 +6,6 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Roboto'; font-weight: 500; }
 
 p { font-size: 20px; line-height: 29px; }
 
-/* Example CSS for indentation */
-h3.month-heading { margin-left: 15px; }
-
-ul.post-list { padding-left: 17px; }
-
-.blog-item::before { content: "-"; margin-right: 5px; }
-
 nav { background-color: #ffffff; padding: 25px; text-align: center; border-bottom: 1px solid #d0d7de; }
 
 nav .logo { position: absolute; left: 25px; padding: 0; font-family: 'Roboto'; font-size: 22px; font-weight: 600; margin-top: -1px; }
@@ -25,7 +18,7 @@ nav a { color: #24292f; font-size: 18px; font-weight: 400; padding: 0 15px; text
 
 nav a:hover { text-decoration: underline; }
 
-nav .twitter { position: absolute; right: 25px; padding: 0; font-family: "Roboto" !important; font-size: 14px !important; margin-top: -35px; display: flex; align-items: center; }
+nav .twitter { position: absolute; right: 25px; padding: 0; font-family: 'Roboto' !important; font-size: 14px !important; margin-top: -35px; display: flex; align-items: center; }
 
 nav .twitter:hover { text-decoration: none; }
 
