@@ -1,202 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-    
-    <url>
-      <loc>/writing</loc>
-      
-        <lastmod>2023-07-30T00:00:00+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/twitter-2</loc>
-      
-        <lastmod>2023-07-22T00:00:00+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/mode-expansion</loc>
-      
-        <lastmod>2023-03-26T00:00:00+00:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/the-trojan-machine</loc>
-      
-        <lastmod>2023-02-23T00:00:00+00:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/prompt-injection</loc>
-      
-        <lastmod>2022-11-07T00:00:00+00:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/compute-is-king</loc>
-      
-        <lastmod>2022-08-11T00:00:00+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.5</priority>
-      
-    </url>
-    
-  
-  
-    
-    <url>
-      <loc>/404.html</loc>
-      
-        <lastmod>2023-07-31T19:24:31+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/about.html</loc>
-      
-        <lastmod>2023-07-31T19:24:31+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/blog.html</loc>
-      
-        <lastmod>2023-07-31T19:24:31+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/</loc>
-      
-        <lastmod>2023-07-31T19:24:31+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-  
-    
-    <url>
-      <loc>/assets/css/styles.css</loc>
-      
-        <lastmod>2023-07-31T19:24:31+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/feed.xml</loc>
-      
-        <lastmod>2023-07-31T19:24:31+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>/robots.txt</loc>
-      
-        <lastmod>2023-07-31T19:24:31+01:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>/compute-is-king</loc>
+<lastmod>2022-08-11T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>/prompt-injection</loc>
+<lastmod>2022-11-07T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>/the-trojan-machine</loc>
+<lastmod>2023-02-23T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>/mode-expansion</loc>
+<lastmod>2023-03-26T00:00:00+00:00</lastmod>
+</url>
+<url>
+<loc>/twitter-2</loc>
+<lastmod>2023-07-22T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>/writing</loc>
+<lastmod>2023-07-30T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>/about.html</loc>
+</url>
+<url>
+<loc>/blog.html</loc>
+</url>
+<url>
+<loc>/</loc>
+</url>
+<url>
+<loc>/app/</loc>
+<lastmod>2023-04-09T11:42:55+01:00</lastmod>
+</url>
 </urlset>
