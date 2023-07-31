@@ -2,6 +2,8 @@
 
 * { font-family: 'proxima-nova'; color: #2a2e30; }
 
+html { overflow-y: scroll; }
+
 h1, h2, h3, h4, h5, h6 { font-family: 'Roboto'; font-weight: 500; }
 
 p { font-size: 20px; line-height: 29px; }
