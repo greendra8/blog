@@ -1,17 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Redirecting...</title>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Art Download</title>
+
+    <!-- Google tags (ensure ID G-HD82SX0YYG is correct) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HD82SX0YYG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-HD82SX0YYG');
+    </script>
+    <!-- Note: Including the same tag script twice is redundant -->
+
     <style>
-        body { font-family: sans-serif; padding: 20px; text-align: center; }
-        .error { color: red; }
+        body {
+            font-family: sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 90%;
+            width: 600px; /* Adjust as needed */
+        }
+        h1 {
+            margin-top: 0;
+            margin-bottom: 5px; /* Reduced margin */
+            color: #333;
+        }
+        small {
+            display: block;
+            margin-bottom: 20px;
+            color: #777;
+        }
+        p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+        #generated-image {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            min-height: 50px; /* Placeholder height */
+            background-color: #eee; /* Placeholder background */
+        }
+        #status-message {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        .error {
+            color: red;
+        }
+        .loading {
+            color: #555;
+        }
+        /* Add styles for your ad containers if needed */
+        .ad-container {
+             margin: 20px 0;
+             min-height: 50px; /* Example minimum height */
+             /* Add other ad styling */
+        }
     </style>
 </head>
 <body>
-    <h1>Processing Download Link</h1>
-    <p id="message">Please wait while we redirect you to the download...</p>
+    <div class="container">
+
+        <!-- Ad Placeholder 1 (example) -->
+        <!-- Replace with your actual Google AdSense code if applicable -->
+        <div class="ad-container" id="ad-slot-1">
+             <!-- Your top ad unit code here -->
+             <p><small>Advertisement</small></p>
+        </div>
+
+
+        <h1 style="margin-bottom: 0;">Make AI Art</h1>
+        <small>For Android</small>
+
+        <p>This is your generated image. Please save it now to ensure you don't lose your creation.</p>
+        <p><strong>(Long press the image and choose 'Save Image' or 'Download Image')</strong></p>
+
+        <img id="generated-image" src="" alt="Generated AI Art - Loading...">
+
+        <p id="status-message" class="loading">Loading image...</p>
+
+        <!-- Ad Placeholder 2 (example) -->
+        <!-- Replace with your actual Google AdSense code if applicable -->
+        <div class="ad-container" id="ad-slot-2">
+             <!-- Your bottom ad unit code here -->
+             <p><small>Advertisement</small></p>
+        </div>
+
+    </div>
 
     <script>
         function getQueryParam(param) {
@@ -21,41 +116,54 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             const encodedUrl = getQueryParam('download_url');
-            const messageElement = document.getElementById('message');
+            const imgElement = document.getElementById('generated-image');
+            const statusElement = document.getElementById('status-message');
 
             if (encodedUrl) {
                 try {
-                    // Decode the URL component
+                    // Decode the URL component (e.g., /gradio_api/file=...)
                     const relativeFileUrl = decodeURIComponent(encodedUrl);
 
-                    // IMPORTANT: Construct the *full* URL to the file on the Hugging Face Space.
-                    // You need to know the base URL of your Space. Replace
-                    // 'YOUR-SPACE-NAME' and 'YOUR-HF-USERNAME' accordingly.
-                    // Example: https://your-hf-username-your-space-name.hf.space
-                    // Or just use relative path if this page is hosted elsewhere
-                    // and the relative path correctly resolves from the Gradio app's perspective.
-                    // Since this page is on arintelli.com, we MUST use the full HF space URL.
+                    // *** CRITICAL: Replace with your ACTUAL Hugging Face Space URL ***
+                    // *** ENSURE IT DOES NOT HAVE A TRAILING SLASH '/' ***
+                    const spaceBaseUrl = "https://greendra-stable-diffusion-3-5-large-serverless2.hf.space"; // NO TRAILING SLASH
+                    // ****************************************************************
 
-                    // *** Replace with your ACTUAL Hugging Face Space URL ***
-                    const spaceBaseUrl = "https://greendra-stable-diffusion-3-5-large-serverless2.hf.space/";
-                    // *******************************************************
+                    // Combine base URL and relative path to get the full image URL
+                    // This automatically handles potential double slashes if relativeFileUrl starts with one
+                    const fullFileUrl = new URL(relativeFileUrl, spaceBaseUrl).href;
 
-                    const fullFileUrl = spaceBaseUrl + relativeFileUrl; // Construct the full URL
+                    console.log("Constructed Image URL:", fullFileUrl); // For debugging
 
-                    messageElement.textContent = `Redirecting you to: ${fullFileUrl}`; // Show the user where they are going
+                    // Set the src attribute of the image tag
+                    imgElement.src = fullFileUrl;
+                    imgElement.alt = "Generated AI Art"; // Update alt text
 
-                    // Redirect the browser to the actual file URL
-                    // The browser will then handle it (e.g., prompt download, display image)
-                    window.location.href = fullFileUrl;
+                    // Update status message on successful load
+                    imgElement.onload = () => {
+                        statusElement.textContent = "Image loaded successfully!";
+                        statusElement.className = 'success'; // Optional: style success message
+                        console.log("Image loaded successfully.");
+                    };
+                    // Update status message on error
+                    imgElement.onerror = () => {
+                        statusElement.textContent = "Error: Could not load the image from the source.";
+                        statusElement.className = 'error';
+                        console.error("Error loading image from:", fullFileUrl);
+                         // You could display the URL here for debugging if needed
+                         // statusElement.textContent += ` URL: ${fullFileUrl}`;
+                    };
 
                 } catch (e) {
-                    console.error("Error decoding URL:", e);
-                    messageElement.textContent = "Error: Could not process the download link (invalid encoding).";
-                    messageElement.classList.add('error');
+                    console.error("Error processing URL:", e);
+                    statusElement.textContent = "Error: Could not process the download link.";
+                    statusElement.className = 'error';
+                    imgElement.alt = "Error loading image";
                 }
             } else {
-                messageElement.textContent = "Error: No download link provided.";
-                messageElement.classList.add('error');
+                statusElement.textContent = "Error: No download link provided in the URL.";
+                statusElement.className = 'error';
+                imgElement.alt = "No image link provided";
             }
         });
     </script>
