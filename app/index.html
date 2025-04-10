@@ -1,64 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
+    <title>Redirecting...</title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Download | Make AI Art</title>
-    <meta name="description" content="Download your image">
-
     <style>
-        body {
-            text-align: center;
-            margin: 20px auto;
-            padding: 0 15px;
-            background: #0b0f19;
-            color: #eee;
-        }
-        img {
-            max-width: 512px;
-            width: 100%;
-        }
+        body { font-family: sans-serif; padding: 20px; text-align: center; }
+        .error { color: red; }
     </style>
 </head>
 <body>
-    <div class="content">
-        <h1 style="margin-bottom: 0;">Make AI Art</h1>
-        <small>For Android</small>
-        <p>This is a temporary download link. Please download your image to ensure that you do not lose your creation.</p>
-        <p>(Long press and Save Image!)</p>
-        <img id="image" src="">
-        <br>
-        <p><b>Prompt:</b><br><span id="prompt"></span></p>
-        <p><b>Seed:</b><br><span id="seed"></span></p>
-        <p><b>Steps:</b><br> 30</p>
-        <p><b>CFG:</b><br> 7</p>
-        <p><b>Sampler:</b><br> k_lms</p>
-        <p><b>Version:</b><br> 2.1</p>
-        <br>
-        
-        <p>Image made free via <a href="https://play.google.com/store/apps/details?id=com.triceratop.aiapp">Make AI Art</a> on Android, using Stable Diffusion</p>
-        <br><br>
-    </div>
-
-    <!-- Google tags -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HD82SX0YYG"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-HD82SX0YYG');
-    </script>
+    <h1>Processing Download Link</h1>
+    <p id="message">Please wait while we redirect you to the download...</p>
 
     <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const link = urlParams.get('link');
-        const prompt = urlParams.get('prompt');
-        const seed = urlParams.get('seed');
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
 
-        document.getElementById('image').src = link;
-        document.getElementById('prompt').innerText = prompt;
-        document.getElementById('seed').innerText = seed;
+        document.addEventListener('DOMContentLoaded', () => {
+            const encodedUrl = getQueryParam('download_url');
+            const messageElement = document.getElementById('message');
+
+            if (encodedUrl) {
+                try {
+                    // Decode the URL component
+                    const relativeFileUrl = decodeURIComponent(encodedUrl);
+
+                    // IMPORTANT: Construct the *full* URL to the file on the Hugging Face Space.
+                    // You need to know the base URL of your Space. Replace
+                    // 'YOUR-SPACE-NAME' and 'YOUR-HF-USERNAME' accordingly.
+                    // Example: https://your-hf-username-your-space-name.hf.space
+                    // Or just use relative path if this page is hosted elsewhere
+                    // and the relative path correctly resolves from the Gradio app's perspective.
+                    // Since this page is on arintelli.com, we MUST use the full HF space URL.
+
+                    // *** Replace with your ACTUAL Hugging Face Space URL ***
+                    const spaceBaseUrl = "https://YOUR-HF-USERNAME-YOUR-SPACE-NAME.hf.space";
+                    // *******************************************************
+
+                    const fullFileUrl = spaceBaseUrl + relativeFileUrl; // Construct the full URL
+
+                    messageElement.textContent = `Redirecting you to: ${fullFileUrl}`; // Show the user where they are going
+
+                    // Redirect the browser to the actual file URL
+                    // The browser will then handle it (e.g., prompt download, display image)
+                    window.location.href = fullFileUrl;
+
+                } catch (e) {
+                    console.error("Error decoding URL:", e);
+                    messageElement.textContent = "Error: Could not process the download link (invalid encoding).";
+                    messageElement.classList.add('error');
+                }
+            } else {
+                messageElement.textContent = "Error: No download link provided.";
+                messageElement.classList.add('error');
+            }
+        });
     </script>
 </body>
 </html>
