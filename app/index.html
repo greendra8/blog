@@ -318,6 +318,26 @@
                 (adsbygoogle = window.adsbygoogle || []).push({});
             </script>
         </div>
+
+        <!-- Add this before the second ad container at the bottom -->
+        <div class="info-section"
+            style="margin: 2rem 0; padding: 1.5rem; background: var(--bg-secondary); border-radius: var(--radius-md); box-shadow: var(--shadow); border: 1px solid rgba(93, 139, 244, 0.1);">
+            <h2 style="font-size: 1.6rem; margin-bottom: 1rem; color: var(--text-primary);">About MakeAIArt</h2>
+            <p style="font-size: 0.95rem; line-height: 1.6;">MakeAIArt is a free platform that lets you create stunning
+                AI-generated images from text descriptions. Our service leverages multiple cutting-edge AI models
+                including Stable Diffusion, DALL·E 3, and other advanced neural networks to transform your ideas into
+                beautiful visual art.</p>
+
+            <h3 style="font-size: 1.2rem; margin: 1.2rem 0 0.5rem; color: var(--text-primary);">How to Get Better
+                Results</h3>
+            <p style="font-size: 0.95rem; line-height: 1.6;">For the best AI-generated images, try being specific with
+                your prompts. Include details about style (oil painting, digital art, photography), lighting, colors,
+                and composition. You can even reference specific artists to influence the style of your creation.</p>
+
+            <p style="margin-top: 1rem; font-size: 0.9rem; color: var(--text-tertiary);">Return to the app to create
+                more AI
+                masterpieces!</p>
+        </div>
     </main>
 
     <script>
@@ -331,13 +351,6 @@
             const spaceName = getQueryParam('space_name') || "greendra-stable-diffusion-3-5-large-serverless"; // Fallback for backwards compatibility
             const imgElement = document.getElementById('generated-image');
             const statusElement = document.getElementById('status-message');
-
-            // Try to fill any unfilled ad slots
-            try {
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            } catch (e) {
-                console.error("AdSense push error:", e);
-            }
 
             if (encodedUrl) {
                 try {
