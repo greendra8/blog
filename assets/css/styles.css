@@ -1,6 +1,6 @@
 @font-face { font-family: 'proxima-nova'; src: url("/assets/fonts/ProximaNova-Regular.otf"); font-weight: normal; font-style: normal; }
 
-* { font-family: 'proxima-nova'; color: #2a2e30; }
+* { font-family: 'proxima-nova'; color: #2a2e30; box-sizing: border-box; }
 
 html { overflow-y: scroll; }
 
@@ -30,7 +30,7 @@ nav i { font-style: normal; font-weight: bold; font-size: 40px !important; margi
 
 .jekyll-twitter-plugin { margin: 0 auto; text-align: center; }
 
-@media only screen and (max-width: 680px) { .logo { position: relative !important; display: block; left: unset !important; padding-bottom: 7px !important; } .twitter { display: none !important; } .section-nav { padding-left: 20px; } .blog-item { padding: 0; } .blog-item li { list-style-type: none; } .content img { width: 100% !important; } }
+@media only screen and (max-width: 680px) { .logo { position: relative !important; display: block; left: unset !important; padding-bottom: 7px !important; } .twitter { display: none !important; } .section-nav { padding-left: 20px; } .blog-item { padding: 0; } .blog-item li { list-style-type: none; } .content .card-logo { width: 60px !important; } .content img { width: 100% !important; } }
 
 body { margin: 0; }
 
@@ -110,7 +110,7 @@ li.toc-entry.toc-h1 { font-weight: bold; }
 /* Website Cards Styling */
 .website-cards { display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 40px; justify-content: space-between; }
 
-.card { flex: 1 1 calc(33.333% - 20px); min-width: 200px; border: 1px solid #d0d7de; border-radius: 8px; overflow: hidden; background-color: #ffffff; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); transition: transform 0.2s, box-shadow 0.2s; display: flex; align-items: center; padding: 15px; }
+.card { flex: 1 1 calc(33.333% - 20px); min-width: 200px; border: 1px solid #d0d7de; border-radius: 8px; overflow: hidden; background-color: #ffffff; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); transition: transform 0.2s, box-shadow 0.2s; display: flex; align-items: center; padding: 15px; text-decoration: none; color: inherit; cursor: pointer; }
 
 .card:hover { transform: translateY(-3px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
 
