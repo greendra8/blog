@@ -1,120 +1,460 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Jack Hullis</title>
-<meta name="generator" content="Jekyll v4.2.2" />
-<meta property="og:title" content="Jack Hullis" />
-<meta property="og:locale" content="en_US" />
-<meta property="og:site_name" content="Jack Hullis" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Jack Hullis" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","headline":"Jack Hullis","name":"Jack Hullis","url":"/"}</script>
-<!-- End Jekyll SEO tag -->
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>arintelli</title>
+  <meta name="description" content="arintelli — projects by Jack Hullis." />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0b0c0e;
+      --text: #e8e8ea;
+      --muted: #8b8e96;
+      --faint: #55585f;
+      --line: rgba(255, 255, 255, 0.10);
+      --dot: #c9ccd4;
+    }
 
-    <link rel="stylesheet" href="/assets/css/styles.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Jack Hullis" /> 
-  </head>
-  <header><nav>
-  <a class="logo" href="/">Jack Hullis</a>
-      
-        <li class="menu-item"><a href="/" class="current">Home</a></li>
-      
-        <li class="menu-item"><a href="/blog" >Blog</a></li>
-      
-        <li class="menu-item"><a href="/about" >About</a></li>
-      
-      <a class="twitter" href="https://x.com/jackhullis"/ target="_blank"><i>𝕏</i><!--<i class="fa fa-twitter"></i>-->@jackhullis</a>
-  </nav></header>
-  <body contenteditable="false">
-    <div class="content"><h1>Sites</h1>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<div class="website-cards">
-  <a class="card" href="https://inthemoment.app" target="_blank" rel="noopener">
-    <img src="/assets/images/inthemoment-logo.png" alt="InTheMoment Logo" class="card-logo">
-    <div class="card-content">
-      <h3 class="card-title">InTheMoment</h3>
-      <p class="card-url">inthemoment.app</p>
-      <p class="card-description">AI-powered meditation sessions</p>
-    </div>
-  </a>
+    html { scroll-behavior: smooth; }
 
-  <a class="card" href="https://play.google.com/store/apps/details?id=com.triceratop.aiapp&hl=en" target="_blank"
-    rel="noopener">
-    <img src="/assets/images/makeaiart-logo.webp" alt="MakeAIArt Logo" class="card-logo">
-    <div class="card-content">
-      <h3 class="card-title">MakeAIArt</h3>
-      <p class="card-url">Google Play</p>
-      <p class="card-description">AI-powered art generator</p>
-    </div>
-  </a>
-</div>
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
 
-<h1>Blog</h1>
-<p>
-  Below is my personal blog about AI. It contains essays, thoughts, and short
-  notes about things that interest me.
-</p>
+    ::selection { background: rgba(255,255,255,0.15); }
 
-<h1>Latest Posts</h1>
+    /* fixed fades top + bottom */
+    .fade {
+      position: fixed;
+      left: 0; right: 0;
+      height: 130px;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .fade-top    { top: 0;    background: linear-gradient(to bottom, var(--bg) 15%, transparent); }
+    .fade-bottom { bottom: 0; background: linear-gradient(to top,    var(--bg) 15%, transparent); }
 
-<ul class="blog-item">
-  
-  <li>
-    <h2><a href="/generated-for-you">Generated For You</a></h2>
-    Social media recommendation algorithms predict content users will engage with. But optimising only for engagement risks filter bubbles and addictive doomscrolling. As these algorithms begin to prompt generative AI models, these issues will likely be exacerbated if platforms continue prioritising engagement over truth, diverse perspectives, and user wellbeing.
-  </li>
-  
-  <li>
-    <h2><a href="/writing">Why I Write</a></h2>
-    I don't write to communicate ideas - but to generate them. I use it as a form of introspection through which I can notice gaps in my thinking, and uncover questions which I hadn’t yet considered. It is a tool that allows me to reach higher levels of thinking by highlighting what I don’t understand.
-  </li>
-  
-  <li>
-    <h2><a href="/twitter-2">X Is a Step Towards a More User-Focused Internet</a></h2>
-    Twitters transition towards X represents a step away from advertiser dependency and towards a more user-focused internet. It’s new revenue model allows it to prioritise user experience whilst also helping to combat bots and spam on the platform, which is an increasingly difficult problem due to recent AI capability advancements and ease of access.
-  </li>
-  
-  <li>
-    <h2><a href="/mode-expansion">Mode Expansion Through Prompting</a></h2>
-    Mode expansion is a technique to help thwart mode collapse, which reduces LLM creativity and diversity. Mode expansion can be achieved through a mix of obedience finetuning and intelligent prompting.
-  </li>
-  
-  <li>
-    <h2><a href="/the-trojan-machine">The Trojan Machine</a></h2>
-    As language models become more sophisticated and powerful, there is a risk that they may develop emergent capabilities or behaviors that are difficult to predict or control. These capabilities may remain hidden until specific circumstances arise that trigger them, making it difficult for humans to anticipate and prepare for them.
-  </li>
-  
-  <li>
-    <h2><a href="/prompt-injection">Prompt Injection</a></h2>
-    Prompt injection is where a user injects a malicious prompt via an input field which manipulates the intended output of the model. It is similar to the idea of SQL injection.
-  </li>
-  
-  <li>
-    <h2><a href="/compute-is-king">A Future Battle For Compute</a></h2>
-    Artificial superintelligence is, by definition, artificial intelligence that far exceeds human intelligence. If artificial superintelligence one day becomes a reality, we will find ourselves far too inferior to protect ourselves from it intellectually. Instead, we will have to employ the help of another artificial superintelligent agent.
-  </li>
-  
-</ul>
+    .page {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 24vh 24px 30vh;
+    }
 
-<p style="margin-top: 30px; text-align: center">
-  <a href="blog.html">View the rest of my posts here</a>
-</p></div>
-    <hr />
-    <footer>Powered by HTML and Jekyll</footer>
-  </body>
+    /* header */
+    .intro { margin-bottom: 110px; }
+
+    .wordmark {
+      font-family: "Newsreader", Georgia, serif;
+      font-weight: 400;
+      font-size: 44px;
+      letter-spacing: 0.01em;
+      line-height: 1.1;
+      color: var(--text);
+      cursor: default;
+      white-space: nowrap;
+    }
+    .wordmark .ghost {
+      display: inline-block;
+      overflow: hidden;
+      max-width: 0;
+      opacity: 0;
+      vertical-align: bottom;
+      white-space: pre;
+      color: var(--faint);
+      transition: max-width 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  opacity 0.6s ease,
+                  color 0.6s ease;
+    }
+    .wordmark:hover .ghost,
+    .wordmark.expanded .ghost { max-width: 5em; opacity: 1; }
+    .wordmark.expanded .ghost { color: var(--text); }
+
+    .tagline {
+      margin-top: 18px;
+      font-family: "Newsreader", Georgia, serif;
+      font-size: 19px;
+      line-height: 1.6;
+      color: var(--muted);
+      max-width: 480px;
+    }
+    .tagline a {
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--faint);
+      transition: color 0.25s ease, border-color 0.25s ease;
+    }
+    .tagline a:hover { color: var(--text); border-color: var(--text); }
+
+    /* timeline */
+    .timeline {
+      position: relative;
+      padding-left: 32px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 3px;
+      top: 6px;
+      bottom: 6px;
+      width: 1px;
+      background: linear-gradient(to bottom,
+        transparent,
+        var(--line) 60px,
+        var(--line) calc(100% - 60px),
+        transparent);
+    }
+
+    .entry {
+      position: relative;
+      padding: 0 0 52px;
+      opacity: 0;
+      transform-origin: left center;
+      will-change: transform, opacity;
+    }
+    .entry:last-child { padding-bottom: 0; }
+
+    .entry::before {
+      content: "";
+      position: absolute;
+      left: -32px;
+      top: 8px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 1px solid var(--faint);
+      transition: background 0.4s ease, border-color 0.4s ease;
+    }
+    .entry:hover::before { background: var(--dot); border-color: var(--dot); }
+
+    .entry .head {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .entry .name {
+      font-size: 15px;
+      font-weight: 550;
+      letter-spacing: 0.01em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    a.name {
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.25s ease, color 0.25s ease;
+    }
+    a.name:hover { border-color: var(--muted); }
+    a.name::after {
+      content: "↗";
+      font-size: 11px;
+      color: var(--faint);
+      margin-left: 5px;
+      display: inline-block;
+      transition: color 0.25s ease, transform 0.25s ease;
+    }
+    a.name:hover::after { color: var(--muted); transform: translate(1px, -1px); }
+
+    .entry .year {
+      font-size: 12.5px;
+      color: var(--faint);
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.03em;
+    }
+
+    .entry .desc {
+      margin-top: 5px;
+      font-size: 14px;
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    /* footer */
+    .footer {
+      margin-top: 130px;
+      display: flex;
+      gap: 22px;
+      font-size: 13px;
+    }
+    .footer a {
+      color: var(--faint);
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+    .footer a:hover { color: var(--text); }
+
+    @media (max-width: 520px) {
+      .page { padding-top: 14vh; }
+      .wordmark { font-size: 34px; }
+      .tagline { font-size: 17px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .entry { opacity: 1 !important; transform: none !important; }
+      .wordmark .ghost { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="fade fade-top"></div>
+  <div class="fade fade-bottom"></div>
+
+  <main class="page">
+    <section class="intro">
+      <h1 class="wordmark expanded" id="wordmark">ar<span class="ghost">tificial </span>intelli<span class="ghost">gence</span></h1>
+      <p class="tagline">Building useful things with artificial intelligence. Currently: <a href="https://inthemoment.app" target="_blank" rel="noopener">InTheMoment</a>, personalised hypnosis and meditation.</p>
+    </section>
+
+    <section class="timeline">
+
+      <div class="entry">
+        <div class="head">
+          <a class="name" href="https://inthemoment.app" target="_blank" rel="noopener">InTheMoment</a>
+          <span class="year">2024–</span>
+        </div>
+        <p class="desc">AI-guided hypnosis and meditation, generating personalised sessions from a short conversation. iOS, Android, and web.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head">
+          <a class="name" href="https://chromewebstore.google.com/detail/mylmarena/dcmbcmdhllblkndablelimnifmbpimae" target="_blank" rel="noopener">MyLMArena</a>
+          <span class="year">2025</span>
+        </div>
+        <p class="desc">Chrome extension that tracks LMArena votes and builds a personal ELO leaderboard of LLMs.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head">
+          <a class="name" href="https://github.com/greendra8/DNSBlocker" target="_blank" rel="noopener">DNSBlocker</a>
+          <span class="year">2024</span>
+        </div>
+        <p class="desc">Custom DNS system on CoreDNS with DoH and a SvelteKit UI for per-user blocking.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head">
+          <a class="name" href="https://github.com/greendra8/SnapGPT" target="_blank" rel="noopener">SMSGpt</a>
+          <span class="year">2024</span>
+        </div>
+        <p class="desc">Read and send Snapchats over SMS from any phone, powered by GPT-4V.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head"><span class="name">Reddit Summariser</span></div>
+        <p class="desc">Chrome extension that summarises Reddit comment threads with an LLM.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head">
+          <a class="name" href="https://web.archive.org/web/20220912105714/https://play.google.com/store/apps/details?id=com.triceratop.aiapp" target="_blank" rel="noopener">MakeAIArt</a>
+          <span class="year">2022</span>
+        </div>
+        <p class="desc">Stable Diffusion image generator app for Android, published on Google Play.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head"><span class="name">FeynTune</span></div>
+        <p class="desc">AI learning tool built around the Feynman technique.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head"><span class="name">DailyCurio</span><span class="year">2024</span></div>
+        <p class="desc">A simple site that tells you a new curio each day.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head">
+          <a class="name" href="/blog">Arintelli Blog</a>
+          <span class="year">2022–</span>
+        </div>
+        <p class="desc">Writing on AI, alignment, and related ideas.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head">
+          <a class="name" href="https://github.com/greendra8/EvieChat" target="_blank" rel="noopener">EvieChat</a>
+          <span class="year">2023</span>
+        </div>
+        <p class="desc">A simple ChatGPT Chrome extension with a clean chat interface.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head"><span class="name">MyMarketingBlog</span></div>
+        <p class="desc">A blog about cool marketing things.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head"><span class="name">BuildShare</span></div>
+        <p class="desc">An app for sharing Minecraft Earth builds — upload creations and browse others.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head">
+          <a class="name" href="https://mce-guide.en.aptoide.com/app" target="_blank" rel="noopener">Guide for Minecraft Earth</a>
+          <span class="year">2019</span>
+        </div>
+        <p class="desc">A simple guide app for Minecraft Earth.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head">
+          <a class="name" href="https://web.archive.org/web/20191115015849/https://playminecraftearth.com/" target="_blank" rel="noopener">PlayMinecraftEarth</a>
+          <span class="year">2019</span>
+        </div>
+        <p class="desc">Fan news site for Minecraft Earth — daily news, tips, and guides.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head"><span class="name">OurMoon</span></div>
+        <p class="desc">A wiki-style site detailing every Moon landing and mission.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head">
+          <a class="name" href="https://web.archive.org/web/20180703043813/http://mymathshack.com/" target="_blank" rel="noopener">MyMathsHack</a>
+        </div>
+        <p class="desc">A tool that revealed the answers to MyMaths homework.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head"><span class="name">Workout Site</span></div>
+        <p class="desc">A simple bodyweight workout site.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head">
+          <a class="name" href="https://web.archive.org/web/20211224135645/http://simplespacex.com/" target="_blank" rel="noopener">SimpleSpaceX</a>
+        </div>
+        <p class="desc">A minimalist SpaceX tracker — upcoming launches, Starlink counts, and Starship prototypes.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head">
+          <a class="name" href="https://twitter.com/owinformer" target="_blank" rel="noopener">OverwatchInformer</a>
+          <span class="year">2017</span>
+        </div>
+        <p class="desc">Overwatch news and analysis — events, skins, and patch coverage.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head">
+          <a class="name" href="https://web.archive.org/web/20180827043033/https://www.rsiupdates.com/" target="_blank" rel="noopener">RSIUpdates</a>
+          <span class="year">2017</span>
+        </div>
+        <p class="desc">Star Citizen news and guides site covering updates and events.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head"><span class="name">PokeballStatus</span><span class="year">2016</span></div>
+        <p class="desc">A simple Pokémon GO server status site.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head"><span class="name">CS:GO Lucky Case Selling</span><span class="year">~2015</span></div>
+        <p class="desc">A Sellfy storefront selling mystery CS:GO cases, each redeemed for a random item.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head">
+          <a class="name" href="https://web.archive.org/web/20160109031818/http://csgoraptor.com/" target="_blank" rel="noopener">CSGORaptor</a>
+          <span class="year">~2015</span>
+        </div>
+        <p class="desc">CS:GO skin giveaway and jackpot site with daily giveaways.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head"><span class="name">Minecraft Server</span></div>
+        <p class="desc">A public Minecraft server hosting minigames.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head"><span class="name">TheTeenageWizard / JackDoesArt</span></div>
+        <p class="desc">YouTube channels covering gaming and art.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head"><span class="name">AirNewsUK</span></div>
+        <p class="desc">A WordPress blog about aviation news.</p>
+      </div>
+
+      <div class="entry">
+        <div class="head"><span class="name">GoCreate</span></div>
+        <p class="desc">A universe-simulation game. Unreleased.</p>
+      </div>
+
+    </section>
+
+    <footer class="footer">
+      <a href="https://x.com/jackhullis" target="_blank" rel="noopener">𝕏</a>
+      <a href="https://github.com/greendra8" target="_blank" rel="noopener">GitHub</a>
+      <a href="/blog">Blog</a>
+    </footer>
+  </main>
+
+  <script>
+    setTimeout(() => document.getElementById("wordmark").classList.remove("expanded"), 2000);
+
+    const entries = [...document.querySelectorAll(".entry")];
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    let hovered = null;
+    entries.forEach(el => {
+      el.addEventListener("mouseenter", () => { hovered = el; });
+      el.addEventListener("mouseleave", () => { if (hovered === el) hovered = null; });
+    });
+
+    // macOS-dock-style focus: entries near the viewport centre (or hovered)
+    // scale up and brighten; everything scrolled past stays revealed but dimmer.
+    function frame() {
+      const centre = window.innerHeight / 2;
+      const range = window.innerHeight * 0.55;
+      const revealLimit = window.innerHeight - 40;
+
+      for (const el of entries) {
+        const r = el.getBoundingClientRect();
+        if (r.top >= revealLimit) {
+          // not yet reached — keep hidden below
+          el.style.opacity = 0;
+          el.style.transform = "translateY(18px)";
+          continue;
+        }
+        const mid = r.top + r.height / 2;
+        let target = Math.max(0, 1 - Math.abs(mid - centre) / range); // 0..1
+        target = target * target * (3 - 2 * target); // smoothstep
+        if (el === hovered) target = 1;
+
+        // ease towards the target so hover/scroll changes glide
+        el._f = (el._f ?? target) + (target - (el._f ?? target)) * 0.12;
+        const f = el._f;
+
+        const scale = 1 + 0.08 * f;
+        const opacity = 0.45 + 0.55 * f;
+        el.style.transform = `translateY(0) scale(${scale})`;
+        el.style.opacity = opacity;
+      }
+      requestAnimationFrame(frame);
+    }
+
+    if (reduceMotion) {
+      entries.forEach(el => { el.style.opacity = 1; el.style.transform = "none"; });
+    } else {
+      requestAnimationFrame(frame);
+    }
+  </script>
+</body>
 </html>
